@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pikachu game</title>
+</head>
+<body ng-app ng-init="health=100; experience=0;">
+
+<form>
+<div>
+<p>PIKACHU</br>
+Health: {{ health }} </br>
+Experience: {{ experience }} </br>
+Level: {{ (experience + 10) / 10 | number:0 }} </p>
+</br>
+
+<input type="button" value="Fight" ng-click="experience = experience + 1; health = health - 15;"/>
+</br>
+<input type="button" value="Use Cure" ng-click="health = health + 50;"/>
+
+</div>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+</body></html>
