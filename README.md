@@ -1,6 +1,8 @@
 # angularjscodesamples
-My angularjs code samples
+This is the repository where I upload all my angularjs code samples that I used in my conferences.
 
-This repository contains angularjs code examples that I have created while I learned Angular.JS in last year.
+You can share it, copy, etc. 
 
-As I have to search for them in my computer, it won't be updated frequently. 
+I will upload the AngularJS course ppt here when I have a free while.
+
+If you find any error, please, tell me.
