@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+<meta charset="UTF-8">
+<title>Example 33</title>
+</head>
+<body>
+
+<form>
+<input type="text" ng-model="textValue"/>
+<br/>
+{{textValue}} - {{selectValue}}
+<br/>
+<select ng-model="selectValue">
+	<option value="one">1</option>
+	<option value="two">2</option>
+</select>
+<input type="button" ng-click="textValue='Hello friend';" value="Push here"/>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+</body></html>
