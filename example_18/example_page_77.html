@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example 74</title>
+	<link rel="stylesheet" href="./ex_style_sheet.css">
+</head>
+<body ng-app="countriesApp" ng-controller="CountriesAppController">
+	<h1> World countries</h1>
+	<p>
+		We are going to use a web service whose name is "Rest Countries".
+		<a href="https://restcountries.eu/">https://restcountries.eu/</a>
+	</p>
+	<p>
+		The url <a href="https://restcountries.eu/rest/v1/all">https://restcountries.eu/rest/v1/all</a> returns all the world countries.
+	</p>
+	<div ng-show="countries.length == 0">Loading countries...</div>
+	<h2 ng-show="countries.length">It was found {{ countries.length }} in the world
+	</h2>
+	<ol>
+		<li ng-repeat="country in countries">{{ country.name }} - {{ country.capital }}
+		</li>
+	</ol>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script src="./controller.js"></script>
+</body></html>

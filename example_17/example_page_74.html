@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example 74</title>
+</head>
+<body>
+
+<div ng-app="app" ng-controller="appCtrl as vm">
+	<h1>Test Ajax</h1>
+	<section>
+		<form ng-submit="vm.sendTo()">
+			Name: <input type="text" ng-model="vm.fdata.name">
+			<br/>
+			Age: <input type="text" ng-model="vm.fdata.age">
+			<br/>
+			<input type="submit" value="Send">
+		</form>
+	</section>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script src="./controller.js"></script>
+</body></html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example 66</title>
+	<style>
+		body { font-family: sans-serif; }
+		li {
+			font-size: 0.8em;
+		}
+		li span {
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+
+<div ng-app="apiApp" ng-controller="apiAppCtrl as vm">
+
+	<h1>Test Ajax</h1>
+	<p> Filter: <input type="text" ng-model="vm.val"/>
+	</p>
+	<p>
+		Select:
+		<select ng-model="vm.url" ng-change="vm.searchInRegion()">
+			<option value="http://restcountries.eu/rest/v1/region/africa">Africa</option>
+			<option value="http://restcountries.eu/rest/v1/region/europe">Europe</option>
+			<option value="http://restcountries.eu/rest/v1/region/americas">America</option>
+		</select>
+	</p>
+	<ul>
+		<li ng-repeat="country in vm.countries | filter:vm.val | orderBy:'-population'">
+			Country: <span>{{country.name}}</span>, capital: {{country.capital}}, citizens: {{country.population}}, timezones: {{country.timezones}}
+		</li>
+	</ul>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script src="./controller.js"></script>
+</body></html>
